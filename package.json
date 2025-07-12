@@ -1,6 +1,6 @@
 {
   "private": true,
-  "author": "qiang.liu <qiang.liu@huifu.com>",
+  "author": "kyo",
   "scripts": {
     "build": "umi build",
     "dev": "umi dev",

@@ -137,7 +137,7 @@ function AIToolbox({ tools }) {
             <span className="text-xl font-bold">AILong 智能工具箱</span>
           </div>
           <div className="flex items-center gap-4">
-            <button className="text-blue-600 hover:text-blue-700">更多AI工具</button>
+            <button type="button" className="text-blue-600 hover:text-blue-700">更多AI工具</button>
             <Share2 className="w-5 h-5 text-gray-600 cursor-pointer" />
             <Settings className="w-5 h-5 text-gray-600 cursor-pointer" />
           </div>
@@ -163,7 +163,7 @@ function AIToolbox({ tools }) {
               </div>
               <h3 className="text-lg font-semibold mb-2">{tool.title}</h3>
               <p className="text-gray-600 text-sm mb-4">{tool.description}</p>
-              <button className="text-blue-600 hover:text-blue-700 text-sm font-medium">
+              <button type="button" className="text-blue-600 hover:text-blue-700 text-sm font-medium">
                 开始使用 →
               </button>
             </div>

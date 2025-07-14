@@ -2,7 +2,7 @@ import { HotTable } from '@handsontable/react-wrapper';
 import 'handsontable/dist/handsontable.full.min.css';
 import { registerAllModules } from 'handsontable/registry';
 import { Upload } from 'lucide-react';
-import Papa from 'papaparse';
+import * as Papa from 'papaparse';
 import { useRef, useState } from 'react';
 import './index.css';
 
@@ -59,6 +59,7 @@ const ExampleComponent = () => {
           ref={fileInputRef}
         />
         <button
+          type="button"
           onClick={handleUploadClick}
           className="flex items-center gap-2 px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
         >

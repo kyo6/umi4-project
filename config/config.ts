@@ -2,7 +2,11 @@ import { defineConfig } from 'umi';
 import defaultSettings from './defaultSettings';
 import routes from './routes';
 
+const repo = 'umi4-project';
+
 export default defineConfig({
+  base: `/${repo}/`,
+  publicPath: `/${repo}/`,
   antd: {},
   layout: {
     locale: true,

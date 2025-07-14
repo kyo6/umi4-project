@@ -80,6 +80,12 @@ const routes: any[] = [
     ],
   },
   {
+    path: '/colors',
+    name: '颜色收藏',
+    icon: "chrome",
+    component: './design/color',
+  },
+  {
     path: 'https://ant.design',
     name: 'Ant Design 官网外链',
     icon: "chrome",

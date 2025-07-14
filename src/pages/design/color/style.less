@@ -1,0 +1,340 @@
+.colors-collection {
+    padding: 24px;
+    background: #fafafa;
+    min-height: 100vh;
+
+    .colors-header {
+        text-align: center;
+        margin-bottom: 32px;
+        
+        h1 {
+            color: #262626;
+            font-size: 2.2rem;
+            font-weight: 600;
+            margin-bottom: 8px;
+        }
+        
+        p {
+            color: #8c8c8c;
+            font-size: 1.1rem;
+            margin: 0;
+        }
+    }
+
+    .colors-controls {
+        margin-bottom: 32px;
+        padding: 20px;
+        background: white;
+        border-radius: 8px;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+        
+        .category-filters {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            
+            .ant-tag {
+                border-radius: 16px;
+                padding: 4px 12px;
+                cursor: pointer;
+                transition: all 0.3s;
+                
+                &.ant-tag-checkable-checked {
+                    background: #1890ff;
+                    border-color: #1890ff;
+                    color: white;
+                }
+            }
+        }
+    }
+
+    .colors-grid {
+        .color-card {
+            border-radius: 12px;
+            overflow: hidden;
+            transition: all 0.3s;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+            
+            &:hover {
+                transform: translateY(-4px);
+                box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+            }
+            
+            .ant-card-body {
+                padding: 0;
+            }
+            
+            .ant-card-actions {
+                background: #fafafa;
+                border-top: 1px solid #f0f0f0;
+                
+                .ant-card-actions > li > span {
+                    padding: 8px 0;
+                    
+                    button {
+                        border: none;
+                        box-shadow: none;
+                        
+                        &:hover {
+                            transform: scale(1.1);
+                        }
+                    }
+                }
+            }
+        }
+
+        .color-content {
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+            
+            .color-preview {
+                height: 120px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                cursor: pointer;
+                position: relative;
+                transition: all 0.3s;
+                
+                &:hover {
+                    transform: scale(1.02);
+                }
+                
+                .transparent-pattern {
+                    position: absolute;
+                    inset: 0;
+                    background: 
+                        linear-gradient(45deg, #ccc 25%, transparent 25%), 
+                        linear-gradient(-45deg, #ccc 25%, transparent 25%), 
+                        linear-gradient(45deg, transparent 75%, #ccc 75%), 
+                        linear-gradient(-45deg, transparent 75%, #ccc 75%);
+                    background-size: 12px 12px;
+                    background-position: 0 0, 0 6px, 6px -6px, -6px 0px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    font-size: 24px;
+                    color: #666;
+                }
+            }
+            
+            .color-info {
+                padding: 16px;
+                background: white;
+                
+                .color-name {
+                    font-size: 1.1rem;
+                    font-weight: 600;
+                    margin: 0 0 8px 0;
+                    color: #262626;
+                }
+                
+                .color-value {
+                    font-family: 'Monaco', 'Menlo', monospace;
+                    font-size: 0.9rem;
+                    color: #8c8c8c;
+                    margin: 0 0 12px 0;
+                    padding: 4px 8px;
+                    background: #f5f5f5;
+                    border-radius: 4px;
+                    user-select: all;
+                    
+                    &:hover {
+                        background: #e6f7ff;
+                    }
+                }
+                
+                .ant-tag {
+                    margin: 0;
+                    border-radius: 12px;
+                    font-size: 0.8rem;
+                    padding: 2px 8px;
+                    background: #f0f0f0;
+                    border: 1px solid #d9d9d9;
+                    color: #666;
+                }
+            }
+        }
+    }
+
+    .empty-state {
+        text-align: center;
+        padding: 64px 0;
+        color: #8c8c8c;
+        
+        p {
+            font-size: 1.1rem;
+            margin: 0;
+        }
+    }
+    
+    .ant-modal {
+        .ant-modal-content {
+            border-radius: 12px;
+            overflow: hidden;
+        }
+        
+        .ant-modal-header {
+            background: #fafafa;
+            border-bottom: 1px solid #f0f0f0;
+            padding: 20px 24px;
+            
+            .ant-modal-title {
+                font-size: 1.2rem;
+                font-weight: 600;
+            }
+        }
+        
+        .ant-modal-body {
+            padding: 24px;
+        }
+        
+        .ant-form-item {
+            margin-bottom: 20px;
+            
+            .ant-form-item-label {
+                padding-bottom: 8px;
+                
+                label {
+                    font-weight: 500;
+                    color: #262626;
+                }
+            }
+            
+            .ant-input[type="color"] {
+                height: 50px;
+                cursor: pointer;
+                border: 2px solid #d9d9d9;
+                border-radius: 8px;
+                transition: all 0.3s;
+                
+                &:hover {
+                    border-color: #40a9ff;
+                }
+                
+                &:focus {
+                    border-color: #1890ff;
+                    box-shadow: 0 0 0 2px rgba(24, 144, 255, 0.2);
+                }
+            }
+        }
+    }
+}
+
+// 响应式设计
+@media (max-width: 768px) {
+    .colors-collection {
+        padding: 16px;
+        
+        .colors-header {
+            h1 {
+                font-size: 1.8rem;
+            }
+            
+            p {
+                font-size: 1rem;
+            }
+        }
+        
+        .colors-controls {
+            padding: 16px;
+            
+            .ant-space {
+                width: 100%;
+                flex-direction: column;
+                align-items: stretch;
+                
+                .ant-space-item {
+                    width: 100%;
+                    
+                    .ant-input-affix-wrapper {
+                        width: 100% !important;
+                    }
+                }
+            }
+        }
+        
+        .colors-grid {
+            .color-card {
+                .color-content {
+                    .color-preview {
+                        height: 100px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+// 深色模式支持
+@media (prefers-color-scheme: dark) {
+    .colors-collection {
+        background: #141414;
+        color: #fff;
+        
+        .colors-header {
+            h1 {
+                color: #fff;
+            }
+            
+            p {
+                color: #bfbfbf;
+            }
+        }
+        
+        .colors-controls {
+            background: #1f1f1f;
+            
+            .category-filters {
+                .ant-tag {
+                    background: #262626;
+                    border-color: #434343;
+                    color: #fff;
+                    
+                    &.ant-tag-checkable-checked {
+                        background: #1890ff;
+                        border-color: #1890ff;
+                        color: white;
+                    }
+                }
+            }
+        }
+        
+        .colors-grid {
+            .color-card {
+                background: #1f1f1f;
+                
+                .ant-card-actions {
+                    background: #141414;
+                    border-top-color: #303030;
+                }
+                
+                .color-content {
+                    .color-info {
+                        background: #1f1f1f;
+                        
+                        .color-name {
+                            color: #fff;
+                        }
+                        
+                        .color-value {
+                            color: #bfbfbf;
+                            background: #262626;
+                        }
+                        
+                        .ant-tag {
+                            background: #262626;
+                            border-color: #434343;
+                            color: #bfbfbf;
+                        }
+                    }
+                }
+            }
+        }
+        
+        .empty-state {
+            color: #bfbfbf;
+        }
+    }
+} 
